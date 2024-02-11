@@ -44,14 +44,15 @@ function workk(){
         counter = true;
     }
     var a = checkforwin();
+    var b = checkfortie();
     if(a === "X" || a === "O"){
         var winr = a + " wins !";
         $("h1").html(winr);
         for(i of btn){
             i.disabled = true;
         }
+        b = false;
     }
-    var b = checkfortie();
     if(b === true){
         $("h1").html("Tie !");
         for(i of btn){
